@@ -38,10 +38,11 @@ public class array{
          }
          System.out.print("Enter the element which you want to insert:");
          in_element=sc.nextInt();
-         
-
-
-
-      
+         arr[size] = in_element;
+        System.out.print("After inserting : ");
+        for(int i = 0; i <size; i++)
+        {
+            System.out.print(arr[i]+",");
+        }   
    }
 }
