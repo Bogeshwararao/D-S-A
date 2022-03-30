@@ -1,3 +1,4 @@
+#prooggram to link the nodes an display
 class Node:
    def __init__(self, dataval):
       self.dataval = dataval
