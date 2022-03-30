@@ -9,10 +9,9 @@ class LinkedList:
       self.headval = None
 
    def listprint(self):
-      printval = self.headval
-      while printval is not None:
-         print (printval.dataval)
-         printval = printval.nextval
+      while self.headval is not None:
+         print (self.headval.dataval)
+         self.headval= self.headval.nextval
 
 list = LinkedList()
 list.headval = Node(1)
