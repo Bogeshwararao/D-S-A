@@ -28,5 +28,4 @@ e2.nextval = e3
 list.listprint()
 
 
-
 #proggram to 
