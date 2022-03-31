@@ -12,3 +12,12 @@
 
 #proggram to insert an elemnet
 list=[1,2,3,4,5]
+print(list)
+x=int(input("Enter the value to be inserted"))
+p=int(input("Enter the position to be insereted"))
+list.append(0)
+for i in range(len(list)-1,p-1,-1):
+    list[i]=list[i-1]
+list[p-1]=x
+
+print(list)
