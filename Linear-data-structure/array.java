@@ -2,11 +2,11 @@ import java.util.Scanner;
 
 //proggram to print the hello world in java
 
-// public class  array{
-//     public static void main(String []args) {
-//        System.out.println("Hello World"); // prints Hello World
-//     }
-//  }
+public class  array{
+    public static void main(String []args) {
+       System.out.println("Hello World"); // prints Hello World
+    }
+ }
 
 //proggram to print the looping 
 
