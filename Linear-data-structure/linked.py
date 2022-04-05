@@ -1,4 +1,5 @@
 #linked list
+#To craete a node 
 class Node:
    def __init__(self, dataval):
       self.dataval = dataval
@@ -7,24 +8,21 @@ class Node:
 class LinkedList:
    def __init__(self):
       self.headval = None
-#up to here to craete a node 
+#The code is to display 
    def listprint(self):
       while self.headval is not None:
          print (self.headval.dataval)
          self.headval= self.headval.nextval
-#the above code is to display 
-#proggram to add the node at the beginning
-   def add_begging(self, newdata):
-       new_node=Node(newdata)
 
-       
-       new_node.nextval=self.headval
-       self.headval=new_node
-
-   def delbeg(self):
+#Proggram to add the node at the beginning
+   
+#This is for the delete the element at the first:
+   def delbegging(self):
       if self.headval is None:
          print("ll is empty")
-      else: self.headval=self.headval.nextval
+      else: 
+         self.headval=self.headval.nextval
+#This is for the delete the element at the End:
    def delend(self):
       if self.headval is None:
        print("ll is empty")
@@ -53,7 +51,7 @@ e3.nextval = e4
 # Link four Node to five node
 e4.nextval = e5
 e5.nextval = e6
-list.delbeg()
+list.delbegging()
 list.delend()
 list.listprint()
 
