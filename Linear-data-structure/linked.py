@@ -15,7 +15,20 @@ class LinkedList:
          self.headval= self.headval.nextval
 
 #Proggram to add the node at the beginning
-   
+   def add_first(self,data):
+      new_node = Node(data)
+      new_node.nextval=self.headval
+      self.headval=new_node
+#Proggram to add the element at the last
+   def add_last(self,data): 
+      new_node = Node(data)
+      if self.headval is None:
+       self.headval = new_node      
+      else:
+       n=self.headval
+       while n.nextval is not None:
+          n=n.nextval
+      n.nextval=new_node
 #This is for the delete the element at the first:
    def delbegging(self):
       if self.headval is None:
@@ -51,7 +64,9 @@ e3.nextval = e4
 # Link four Node to five node
 e4.nextval = e5
 e5.nextval = e6
-list.delbegging()
-list.delend()
+list.add_last(9)
+list.add_first(0)
+# list.delbegging()
+# list.delend()
+# list.listprint()
 list.listprint()
-
