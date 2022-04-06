@@ -29,7 +29,7 @@ class LinkedList:
        while n.nextval is not None:
           n=n.nextval
       n.nextval=new_node
-#Proggram to add node before a specific Node:
+#Proggram to add node after a specific Node:
    def add_after(self,target, dataval):
     if (self.headval.dataval == target):
         new_node = Node(dataval)
@@ -42,7 +42,26 @@ class LinkedList:
       new_node = Node(dataval)
       new_node.nextval = n.nextval
       n.nextval = new_node
-   
+#Proggram to add node before a specific Node:
+   def add_before(self,x,data):
+
+        if self.headval is None:
+            print("ll is empty")
+        if self.headval == x:
+            new_node = Node(data)
+            new_node.next = self.head
+            self.headval = new_node
+            return
+        n = self.headval
+        while n.nextval is not None:
+            if n.nextval.dataval == x:
+              break
+            n = n.nextval
+        new_node = Node(data)
+        new_node.nextval = n.nextval
+        n.nextval = new_node
+               
+             
 
 #This is for the delete the element at the first:
    def delbegging(self):
@@ -79,9 +98,9 @@ e3.nextval = e4
 # Link four Node to five node
 e4.nextval = e5
 e5.nextval = e6
-list.addBefore(3,499)
-# list.add_last(7)
-# list.add_first(0)
-# list.delbegging()
-# list.delend()
+list.add_before(3,499)
+#list.add_last(7)
+#list.add_first(0)
+#list.delbegging()
+#list.delend()
 list.listprint()
