@@ -31,9 +31,16 @@ class LinkedList:
       n.nextval=new_node
 #Proggram to add node before a specific Node:
    def add_before(self,x,data):
-
         if self.headval is None:
             print("ll is empty")
+            return
+            #here if the linked list contain only one node:
+            if self.headval.dataval ==x:
+               new_node=Node(data)
+               new_node.next=self.headval
+               self.headval=new_node
+               return
+            #if linked list contain multiple node:
         n = self.headval
         while n.nextval is not None:
             if n.nextval.dataval == x:
