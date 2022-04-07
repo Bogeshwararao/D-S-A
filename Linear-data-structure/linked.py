@@ -34,8 +34,8 @@ class LinkedList:
         if self.headval is None:
             print("ll is empty")
             return
-            #here if the linked list contain only one node:
-            if self.headval.dataval ==x:
+         #here if the linked list contain only one node:
+        if self.headval.dataval ==x:
                new_node=Node(data)
                new_node.nextval=self.headval
                self.headval=new_node
@@ -97,7 +97,7 @@ e3.nextval = e4
 # Link four Node to five node
 e4.nextval = e5
 e5.nextval = e6
-list.add_before(3,499)
+list.add_before(1,499)
 #list.add_last(7)
 #list.add_first(0)
 #list.delbegging()
