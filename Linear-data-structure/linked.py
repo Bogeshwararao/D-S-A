@@ -37,7 +37,7 @@ class LinkedList:
             #here if the linked list contain only one node:
             if self.headval.dataval ==x:
                new_node=Node(data)
-               new_node.next=self.headval
+               new_node.nextval=self.headval
                self.headval=new_node
                return
             #if linked list contain multiple node:
