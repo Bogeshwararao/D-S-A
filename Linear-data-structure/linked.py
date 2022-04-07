@@ -34,11 +34,6 @@ class LinkedList:
 
         if self.headval is None:
             print("ll is empty")
-        if self.headval == x:
-            new_node = Node(data)
-            new_node.next = self.head
-            self.headval = new_node
-            return
         n = self.headval
         while n.nextval is not None:
             if n.nextval.dataval == x:
