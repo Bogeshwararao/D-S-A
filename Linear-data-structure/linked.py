@@ -72,13 +72,38 @@ class LinkedList:
    def delend(self):
       if self.headval is None:
        print("ll is empty")
-      # elif self.headval is None:
-      #    self.headval=None
       else:
          n=self.headval
       while n.nextval.nextval is not None:
          n=n.nextval
       n.nextval=None
+#This is to delete the specific element in a linked list:
+   def remove_node(self, remove_data):
+        n = self.headval
+
+        # Remove if data is the first element
+        if n is not None:
+            if n.dataval == remove_data:
+                self.headval = n.nextval
+                n = None
+                return
+
+        # find out the data node and previous node
+        while n is not None:
+            if n.dataval == remove_data:
+                break
+            prev = n
+            n = n.nextval
+
+        # Return if head val is empty
+        if n == None:
+            return
+
+        # Remove item from linked list
+        prev.nextval = n.nextval
+        n = None
+
+
 
 list = LinkedList()
 
@@ -97,7 +122,8 @@ e3.nextval = e4
 # Link four Node to five node
 e4.nextval = e5
 e5.nextval = e6
-list.add_before(1,499)
+#list.add_before(1,499)
+list.remove_node(2)
 #list.add_last(7)
 #list.add_first(0)
 #list.delbegging()
