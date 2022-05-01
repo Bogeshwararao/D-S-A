@@ -26,6 +26,10 @@ def mergeSort(nlist):
             nlist[k]=righthalf[j]
             j=j+1
             k=k+1
-nlist = [14,46,43,27,57,41,45,21,70]
-mergeSort(nlist)
-print(nlist)
+#nlist = [14,46,43,27,57,41,45,21,70]
+#mergeSort(nlist)
+
+#print(nlist)
+
+
+d
