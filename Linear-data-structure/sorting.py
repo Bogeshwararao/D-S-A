@@ -32,7 +32,7 @@ def mergeSort(arr):
         a = len(arr)//2
 
         l = arr[:a]
-        
+                 
         r = arr[a:]
 
         # Sort the two halves
