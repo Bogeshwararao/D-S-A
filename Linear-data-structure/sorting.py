@@ -13,15 +13,18 @@ def qs(a,f,n):
                 temp=a[i]
                 a[i]=a[j]
                 a[j]=temp
-        temp=a[j]
-        a[j]=a[f]
-        a[f]=temp
+        if a[j]<a[f]:
+            temp=a[j]
+            a[j]=a[f]
+            a[f]=temp
         qs(a,f,j-1)
         qs(a,j+1,n)
     else:
         return
-a=[3,6,11,12,13]
+a=[6,30,67,44,3,45]
 qs(a,0,len(a)-1)
+print(a)
+
 #print(a)
 ##################################################################################################################
 #merge sort :
@@ -78,3 +81,62 @@ def mergeSort(arr):
 arr=[4,3,7,6,5,3,1,2]
 mergeSort(arr)
 print(arr)
+<<<<<<< HEAD
+=======
+
+
+######################
+#mam code
+def ms(A,l,u):
+    print("l=",l,"u=",u)
+    if(l>=u):
+        return
+    else:
+        m=int((l+u)/2)
+        print("M=",m)
+        ms(A,l,m)
+        ms(A,m+1,u)
+        merge(A,l,m,u)
+    
+def merge(A,l,m,u):
+    print("L=",l,"M=",m,"U=",u)
+    i=l
+    j=m+1
+    k=l
+   
+    temp=[]
+    while(i<=m and j<=u):
+        if(A[i]<A[j]):
+            print(A[i])
+            temp.insert(k,A[i])
+            k+=1
+            i+=1
+        
+        else:
+            print(A[j])
+            temp.insert(k,A[j])
+            k+=1
+            j+=1
+    if(i>m):
+        while(j<=u):
+            temp.insert(k,A[j])
+            j+=1
+            k+=1
+    else:
+        while(i<=m):
+            temp.insert(k,A[i])
+            i+=1
+            k+=1
+    print("temp",temp)
+    for i in range(l,u,1):
+        A[i]=temp[i]
+        
+
+a=[10,4,50]
+print("Before Sort :",a)
+ms(a,0,5)
+print("After Sort :",a)
+
+            
+    
+>>>>>>> d0c555c97791b1695fa1e81f3187f5501993ed4a
