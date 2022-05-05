@@ -13,15 +13,18 @@ def qs(a,f,n):
                 temp=a[i]
                 a[i]=a[j]
                 a[j]=temp
-        temp=a[j]
-        a[j]=a[f]
-        a[f]=temp
+        if a[j]<a[f]:
+            temp=a[j]
+            a[j]=a[f]
+            a[f]=temp
         qs(a,f,j-1)
         qs(a,j+1,n)
     else:
         return
-a=[3,6,11,12,13]
+a=[6,30,67,44,3,45]
 qs(a,0,len(a)-1)
+print(a)
+
 #print(a)
 ##################################################################################################################
 #merge sort :
