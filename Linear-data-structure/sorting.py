@@ -78,3 +78,59 @@ def mergeSort(arr):
 arr=[4,3,7,6,5,3,1,2]
 mergeSort(arr)
 print(arr)
+
+
+######################
+#mam code
+def ms(A,l,u):
+    print("l=",l,"u=",u)
+    if(l>=u):
+        return
+    else:
+        m=int((l+u)/2)
+        print("M=",m)
+        ms(A,l,m)
+        ms(A,m+1,u)
+        merge(A,l,m,u)
+    
+def merge(A,l,m,u):
+    print("L=",l,"M=",m,"U=",u)
+    i=l
+    j=m+1
+    k=l
+   
+    temp=[]
+    while(i<=m and j<=u):
+        if(A[i]<A[j]):
+            print(A[i])
+            temp.insert(k,A[i])
+            k+=1
+            i+=1
+        
+        else:
+            print(A[j])
+            temp.insert(k,A[j])
+            k+=1
+            j+=1
+    if(i>m):
+        while(j<=u):
+            temp.insert(k,A[j])
+            j+=1
+            k+=1
+    else:
+        while(i<=m):
+            temp.insert(k,A[i])
+            i+=1
+            k+=1
+    print("temp",temp)
+    for i in range(l,u,1):
+        A[i]=temp[i]
+        
+
+a=[10,4,50]
+print("Before Sort :",a)
+ms(a,0,5)
+print("After Sort :",a)
+
+            
+    
