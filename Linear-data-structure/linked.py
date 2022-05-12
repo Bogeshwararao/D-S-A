@@ -10,6 +10,8 @@ class LinkedList:
       self.headval = None
 #The code is to display 
    def listprint(self):
+      if self.head==Null:
+         print("LL is empty")
       while self.headval is not None:
          print (self.headval.dataval)
          self.headval= self.headval.nextval
