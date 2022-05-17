@@ -10,8 +10,6 @@ class LinkedList:
       self.headval = None
 #The code is to display 
    def listprint(self):
-      if self.head==Null:
-         print("LL is empty")
       while self.headval is not None:
          print (self.headval.dataval)
          self.headval= self.headval.nextval
@@ -64,6 +62,24 @@ class LinkedList:
       new_node = Node(dataval)
       new_node.nextval = n.nextval
       n.nextval = new_node
+#proggram to add node at specific position:
+   def add_pos(self,pos,dataval):
+      if pos<0:
+         print("pos is invalid")
+      if pos==1:
+         new_node=Node(dataval)
+         new_node.nextval=self.headval
+         self.headval=new_node
+      else:
+         temp=self.headval
+         i=2
+         while(i<pos):
+            temp=temp.nextval
+            i+=1
+         new_node=Node(dataval)
+         new_node.nextval=temp.nextval
+         temp.nextval=new_node
+          
 #This is for the delete the element at the first:
    def delbegging(self):
       if self.headval is None:
@@ -125,7 +141,8 @@ e3.nextval = e4
 e4.nextval = e5
 e5.nextval = e6
 #list.add_before(1,499)
-list.remove_node(2)
+#list.remove_node(2)
+list.add_pos(5,20)
 #list.add_last(7)
 #list.add_first(0)
 #list.delbegging()
