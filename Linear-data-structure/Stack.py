@@ -91,3 +91,54 @@ MyStack.display()
 print("\nTop element is ", MyStack.peek())
 
 
+
+
+
+
+
+
+################################################################################################################################################################
+def priorty(ch):
+    if ch in "+-":
+        return 1
+    elif ch in "^":
+        return 3
+    elif ch in "*/":
+        return 2
+    else:
+        return 0
+def infix(inf):
+    i = 0
+    st = []
+    pos = ""
+    for ch in inf:
+        ch == "("
+        if (ch == "("):
+            st.append(ch)
+        elif(ch.isalpha()):
+            pos += ch
+        elif(ch == ")"):
+             k=st.pop()
+             while(k != ")"):
+                pos += k
+                k =st.pop()
+        elif ch in "+-/%*^":
+            if not st:
+                st.append(ch)
+            elif priorty(ch) <= priorty(st[-1]):
+                pos += st.pop()
+                while (st and priorty(ch) <= priorty(st[-1])):
+                    pos += st.pop()
+                st.append(ch)       
+            
+        else:
+            st.append(ch)
+    while(st):
+        pos+= st.pop()
+        
+    print (pos)
+inn = input("Enter: ")
+print(inn)
+infix(inn)
+
+
