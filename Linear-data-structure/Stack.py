@@ -1,3 +1,30 @@
+class StackUsingArray:
+    def _init_(self):
+        self.stack = []
+
+    #Method to append the element in the stack at top position.
+    def push(self, element):
+        self.stack.append(element)
+
+    #Method to Pop last element from the top of the stack
+    def pop(self):
+        item=self.stack.pop()
+        return item
+
+    #Method to check if stack is empty or not
+    def isEmpty(self):
+        return self.stack == []
+
+    def printStack(self):
+        print(self.stack)
+s=StackUsingArray()
+s.push(1)
+s.push(2)
+s.push(3)
+s.pop()
+s.printStack()
+
+
 class Node:
 	
 	# Class to create nodes of linked list
